@@ -21,5 +21,5 @@ COPY conf/default /etc/nginx/nginx.conf
 
 ADD app /opt/app/
 RUN chmod +x /opt/app/exec.sh && dos2unix /opt/app/exec.sh
-EXPOSE 9001 22 80 9181 8080
+EXPOSE 9001 22 80 9181 8080 8081
 CMD ["/usr/bin/supervisord"]
