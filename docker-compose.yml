@@ -1,9 +1,9 @@
 dev:
   build: .
   ports:
-  - "22"
-  - "9001"
-  - "80"
+  - "222:22"
+  - "9001:9001"
+  - "80:80"
   hostname: example1
   environment:
     RACK_ENV: development
