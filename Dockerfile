@@ -3,7 +3,7 @@ MAINTAINER levkov
 
 RUN rm -f /etc/localtime && ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 RUN yum update -y
-RUN rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm && \
+RUN yum install -y epel-release && \
     yum install -y python-pip openssh-server openssh-clients nginx redis dos2unix && \
     pip install supervisor requests==2.5.3 Flask gunicorn redis rq rq-dashboard rq-scheduler BeautifulSoup
 
